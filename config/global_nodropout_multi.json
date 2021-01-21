@@ -1,0 +1,32 @@
+{
+   "Stellar Features": [
+     "Depth",
+     "Duration",
+     "Teff",
+     "Radius",
+     "logg",
+     "Mass",
+     "lum",
+     "rho",
+     "rp_rs",
+     "DepthEven",
+     "DepthOdd"
+   ],
+   "Use Shifted Global View" : false,
+   "Binary Classification" : false,
+
+   "Disposition": {
+      "KP": 1,  
+      "PC": 1,  
+      "CP": 1,  
+      "PC_X": 0,
+      "EB": 0,
+      "FP": 0,
+      "FA": 0,
+      "J": 0,  
+      "V": 0,  
+      "IS": 0, 
+      "UNK": 0,  
+      "O": 0 
+   }
+}
