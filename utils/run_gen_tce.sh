@@ -1,4 +1,4 @@
-for i in 30
+for i in 14
 do 
    echo $i; 
    python gen_tce_info.py --input ../output/scores/sec$i.csv \

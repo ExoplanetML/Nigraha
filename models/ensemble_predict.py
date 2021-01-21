@@ -52,7 +52,7 @@ def generate_predictions(args, config, print_output=True):
                         count += 1
                         datum = prepare_one_record(record, stellar_params, config['Use Shifted Global View'])
                         if datum is None:
-                                print(f'Got null datum for {count}, {tess_id}')
+                                #print(f'Got null datum for {count}, {tess_id}')
                                 skipped += 1
                                 continue
                         if count % 100 == 0:

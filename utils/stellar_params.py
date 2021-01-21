@@ -6,6 +6,7 @@ import pandas as pd
 import pprint
 from tqdm import tqdm
 from astroquery.mast import Catalogs
+import os, sys
 
 from transitleastsquares import (
     transitleastsquares,
@@ -15,8 +16,7 @@ from transitleastsquares import (
     )
 
 if __name__ == '__main__':
-    df = pd.read_csv('../catalog/period_info-sec30.csv')
-    #df = pd.read_csv('../catalog/s19-pinfo.csv')
+    df = pd.read_csv(sys.argv[1])
     mass = [np.nan] * len(df)
     #a = [np.nan] * len(df)
     #b = [np.nan] * len(df)
@@ -46,4 +46,4 @@ if __name__ == '__main__':
     df['distance'] = distance
     df['lum'] = lum
     df['rho'] = rho
-    df.to_csv('../catalog/period_info-sec30-new.csv')
+    df.to_csv(sys.argv[2])
