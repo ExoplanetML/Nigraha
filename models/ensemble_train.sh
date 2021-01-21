@@ -1,8 +1,6 @@
 #!bash
-#for classifier in binary multi
 for classifier in binary 
 do
-#  for views in global_nodropout shifted_global_nodropout
   for views in global_nodropout
   do
      for i in {1..10}
