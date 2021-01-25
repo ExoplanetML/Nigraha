@@ -20,8 +20,7 @@ global ld
 def load_claret_tess_info():
     global ld
     ld = numpy.genfromtxt(
-            os.path.join("/Users/srirao/Personal/Astro/data/TESS", "ld_claret_tess.csv"),
-            #os.path.join("/home/srirao/Astro/", "ld_claret_tess.csv"),
+            os.path.join("../lcs/", "ld_claret_tess.csv"),
             skip_header=1,
             delimiter=",",
             dtype="f8, int32, f8, f8",
