@@ -27,6 +27,9 @@ tic_catalog = None
 file2tic = None
 exclude_tics = []
 
+#
+# Patterned after samples for building records in TF documentation.
+#
 def _set_float_feature(ex, name, value):
         """Sets the value of a float feature in a tensorflow.train.Example proto."""
         assert name not in ex.features.feature, "Duplicate feature: %s" % name
@@ -213,6 +216,11 @@ def get_folded_lightcurve(tess_id, lc_raw, period, t0, duration_hours):
                 return None
 
 def process_lightcurve(tess_id, lc_raw, period, t0, duration_hours):
+        #
+        # Given a raw lightcurve, convert that to global/local views.  
+        # The code is based on tutorials at:
+        #    https://docs.lightkurve.org/tutorials/05-advanced_patterns_binning.html
+        #
         try:
                 lc_fold = get_folded_lightcurve(tess_id, lc_raw, period, t0, duration_hours)
                 if lc_fold is None:
@@ -247,11 +255,6 @@ def process_lightcurve(tess_id, lc_raw, period, t0, duration_hours):
                 return None, None, None
 
 def _process_lightcurve(tess_id, lc_raw):
-        #
-        # Given a raw lightcurve, convert that to global/local views.  The code is based on:
-        #    https://docs.lightkurve.org/tutorials/05-advanced_patterns_binning.html
-        # where, we have liberally reused lines from the tutorial.
-        #
         global tic_catalog
         if tess_id not in tic_catalog.index:
             return None, None, None
