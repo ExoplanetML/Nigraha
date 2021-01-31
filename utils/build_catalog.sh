@@ -1,7 +1,7 @@
 
 for i in 14; 
 do 
-    python build_lcdb.py ../lcs/sector$i --output ../catalog/tic2file-sec$i.csv
+    python build_lcdb.py ../lcs/sector$i ../catalog/tic2file-sec$i.csv
 
     mkdir -p ../catalog/temp
     echo "Computing priors..."
