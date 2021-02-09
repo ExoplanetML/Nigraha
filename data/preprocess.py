@@ -31,18 +31,15 @@ exclude_tics = []
 # Patterned after samples for building records in TF documentation.
 #
 def _set_float_feature(ex, name, value):
-        """Sets the value of a float feature in a tensorflow.train.Example proto."""
         assert name not in ex.features.feature, "Duplicate feature: %s" % name
         ex.features.feature[name].float_list.value.extend([float(v) for v in value])
 
 def _set_bytes_feature(ex, name, value):
-        """Sets the value of a bytes feature in a tensorflow.train.Example proto."""
         assert name not in ex.features.feature, "Duplicate feature: %s" % name
         ex.features.feature[name].bytes_list.value.extend([str(v).encode("utf-8") for v in value])
 
 
 def _set_int64_feature(ex, name, value):
-        """Sets the value of an int64 feature in a tensorflow.train.Example proto."""
         assert name not in ex.features.feature, "Duplicate feature: %s" % name
         ex.features.feature[name].int64_list.value.extend([int(v) for v in value])
 
