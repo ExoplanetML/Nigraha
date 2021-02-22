@@ -6,7 +6,9 @@ This repository contains the code, models, and data from our Nigraha pipeline fo
 ## Citation
 If you use this code, please cite it:
 
-Rao, S & Mahabal, A & Rao, N & Raghavendra, C (2020).  Nigraha: Machine-learning based pipeline to identify and evaluate planet candidates from TESS. _MNRAS_.
+Rao, S & Mahabal, A & Rao, N & Raghavendra, C (2020).  Nigraha: Machine-learning based pipeline to identify and evaluate planet candidates from TESS. 
+Monthly Notices of the Royal Astronomical Society, Volume 502, Issue 2, April 2021, Pages 2845–2858
+
 
 ## Required packages
     pip install transitleastsquares lightkurve matrixprofile tensorflow numpy pandas scipy
