@@ -1,0 +1,6 @@
+Steps to update exofop catalog:
+
+1. From the tev site: https://tev.mit.edu/data/collection/193/, save the Atlas summary.
+2. From the exofop site: https://exofop.ipac.caltech.edu/tess/view_toi.php, download the table as csv
+3. Run python update_exofop_tev_catalog.py
+
